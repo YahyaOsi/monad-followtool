@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who From Monad Community Members Should Follow You Today?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Who From Monad Community Members Should Follow You Today?</h1>
+        <p class="subtitle">Just For Fun</p>
+
+        <div id="input-section">
+            <form id="username-form" class="input-group">
+                <input type="text" id="twitter-username-input" class="twitter-input" placeholder="Enter your Twitter username (e.g. @your_username)" required>
+                <button type="submit" class="main-btn">Click To Find Out!</button>
+            </form>
+        </div>
+
+        <div id="loading-section" class="hidden">
+            <div class="spinner">💜</div>
+            <p>Please wait while we find who should follow you today...</p>
+        </div>
+
+        <div id="result-section" class="hidden">
+            <p>Today, you should be followed by:</p>
+            <a href="#" id="result-username" target="_blank" rel="noopener noreferrer"></a>
+            <div class="action-buttons">
+                <button id="check-again-btn" class="action-btn">Check Again</button>
+                <button id="share-btn" class="action-btn">Share on Twitter</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="disclaimer">
+            This tool was created just for fun. All data is based on public Monad community X usernames.
+            It’s not an official Monad project in any way. The purpose is simply to help Monad community 
+            members connect with each other on X.
+        </p>
+        <p class="credits">
+            Made with 💜 by <a href="https://x.com/YahyaOsi" target="_blank" rel="noopener noreferrer">@YahyaOsi</a> — just for fun
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
