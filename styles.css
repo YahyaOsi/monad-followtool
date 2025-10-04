@@ -1,0 +1,232 @@
+:root {
+    --purple: #8A2BE2;
+    --lavender: #E6E6FA;
+    --dark-bg: #100f14;
+    --light-text: #f0f0f0;
+    --dark-text: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--light-text);
+    background: linear-gradient(135deg, #0a011a, #1a0b36, #4d2f7a);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--lavender);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.twitter-input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--lavender);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-text);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.twitter-input::placeholder {
+    color: rgba(230, 230, 250, 0.6);
+}
+
+.twitter-input:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+}
+
+.main-btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--purple);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main-btn:hover {
+    background-color: #9932CC;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+#loading-section {
+    padding: 40px 0;
+}
+
+.spinner {
+    font-size: 3rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+#loading-section p {
+    margin-top: 15px;
+    color: var(--lavender);
+}
+
+#result-section {
+    padding: 20px 0;
+}
+
+#result-section p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+#result-username {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(90deg, var(--lavender), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#result-username:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(230, 230, 250, 0.5);
+}
+
+.action-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.action-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+#check-again-btn {
+    background-color: transparent;
+    color: var(--lavender);
+    border-color: var(--lavender);
+}
+
+#check-again-btn:hover {
+    background-color: var(--lavender);
+    color: var(--dark-text);
+}
+
+#share-btn {
+    background-color: #1DA1F2; /* Twitter Blue */
+    color: white;
+    border-color: #1DA1F2;
+}
+
+#share-btn:hover {
+    background-color: #0c85d0;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.8rem;
+    color: rgba(230, 230, 250, 0.7);
+    max-width: 600px;
+}
+
+.disclaimer {
+    margin-bottom: 15px;
+}
+
+.credits a {
+    color: var(--lavender);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    #result-username {
+        font-size: 1.5rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+}
